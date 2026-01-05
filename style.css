@@ -1,0 +1,93 @@
+:root {
+  --bg: #f4f7fb;
+  --text: #222;
+  --primary: #1f4fd8;
+  --card: #ffffff;
+}
+
+.dark {
+  --bg: #121212;
+  --text: #f1f1f1;
+  --card: #1e1e1e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  text-align: center;
+}
+
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  border: none;
+  padding: 12px 18px;
+  border-radius: 20px;
+  background: var(--primary);
+  color: white;
+  font-size: 16px;
+}
+
+.protocol {
+  margin: 15px;
+}
+
+.circle-container {
+  position: relative;
+  margin: 20px auto;
+  width: 240px;
+}
+
+svg {
+  transform: rotate(-90deg);
+}
+
+circle {
+  fill: none;
+  stroke-width: 12;
+}
+
+circle:first-child {
+  stroke: #ddd;
+}
+
+#progress {
+  stroke: var(--primary);
+  stroke-dasharray: 660;
+  stroke-dashoffset: 660;
+  transition: stroke-dashoffset 1s linear;
+}
+
+.circle-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px;
+}
+
+section {
+  background: var(--card);
+  margin: 15px;
+  padding: 15px;
+  border-radius: 12px;
+}
