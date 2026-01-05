@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FastLife</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1f4fd8">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+  <h1>FastLife</h1>
+  <button id="toggleTheme">🌙</button>
+</header>
+
+<section class="protocol">
+  <label>Protocolo:</label>
+  <select id="protocol">
+    <option value="12">12:12</option>
+    <option value="14">14:10</option>
+    <option value="16" selected>16:8</option>
+    <option value="18">18:6</option>
+    <option value="20">20:4</option>
+    <option value="24">OMAD</option>
+  </select>
+</section>
+
+<section class="circle-container">
+  <svg width="240" height="240">
+    <circle cx="120" cy="120" r="105"></circle>
+    <circle cx="120" cy="120" r="105" id="progress"></circle>
+  </svg>
+  <div class="circle-text">
+    <span id="status">Jejum parado</span>
+    <strong id="timer">00:00:00</strong>
+  </div>
+</section>
+
+<div class="actions">
+  <button id="start">Iniciar</button>
+  <button id="stop">Finalizar</button>
+</div>
+
+<section class="water">
+  <h2>💧 Água</h2>
+  <p><span id="waterCount">0</span> / 8 copos</p>
+  <div class="actions">
+    <button id="addWater">+1</button>
+    <button id="undoWater">Desfazer</button>
+  </div>
+</section>
+
+<section class="dashboard">
+  <h2>📊 Hoje</h2>
+  <p>Jejuns concluídos: <span id="fastsDone">0</span></p>
+  <p>Status: <span id="dashStatus">-</span></p>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
